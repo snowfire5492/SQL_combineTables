@@ -1,0 +1,38 @@
+CREATE TABLE Person (
+  FirstName     VARCHAR(15) NOT NULL, 
+  LastName      VARCHAR(29) NOT NULL, 
+  PersonId      INTEGER     NOT NULL
+  );
+  
+ CREATE TABLE Address (
+   AddressId    INTEGER NOT Null,
+   PersonId     INTEGER, 
+   City      VARCHAR(20) NOT NULL, 
+   State     VARCHAR(20) NOT NULL
+   );
+   
+    INSERT INTO Person
+ values('Eric','Schenck',123);
+ 
+ INSERT INTO Person
+ values('Jenn','Coburn',234);
+ 
+ INSERT INTO Person
+ values('Roger','Doggie',420);
+ 
+ INSERT INTO Person
+ values('Jim','Fakeman',111);
+ 
+ 
+ INSERT INTO Address
+ values(987,123,'Hillsboro','Oregon');
+ 
+ INSERT INTO Address
+ values(777,234,'Hillsboro','Oregon');
+ 
+ INSERT INTO Address
+ values(122,420,'Hillsboro','Oregon');
+ 
+ INSERT INTO Address
+ values(121,123,'Chino Hills','California');
+ 
