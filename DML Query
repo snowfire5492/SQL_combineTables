@@ -1,3 +1,17 @@
 (SELECT p.FirstName, p.LastName, a.City, a.State
  FROM Person p LEFT JOIN Address a
  ON p.PersonId = a.PersonId);
+ 
+ 
+ ********************** OR *****************************
+ 
+ 
+ (SELECT p.FirstName, p.LastName, a.City, a.State
+ FROM Person p, Address a
+ WHERE p.PersonId = a.PersonId)
+ UNION 
+ (SELECT p.FirstName, p.LastName, null, null
+  FROM Person p
+  WHERE p.PersonId NOT IN (SELECT a.PersonId
+                           FROM Address a));
+
